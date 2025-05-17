@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoodBoard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <h1 class="project-title">📝 MoodBoard</h1>
+    <p class="subtitle">Track your emotions, one day at a time</p>
+    <button id="toggleTheme">🌙</button>
+  </header>
+
+  <main>
+    <section class="calendar-container">
+      <div class="calendar-header">
+        <button id="prevMonth">←</button>
+        <h2 id="monthYear">Month Year</h2>
+        <button id="nextMonth">→</button>
+      </div>
+      <div class="calendar" id="calendar"></div>
+    </section>
+
+    <aside class="analytics">
+      <canvas id="moodChart" width="250" height="250"></canvas>
+      <h3 id="topMood"></h3>
+      <button id="clearAll">🗑️ Clear All</button>
+    </aside>
+  </main>
+
+  <div class="modal" id="moodModal">
+    <div class="modal-content">
+      <h2>Select Mood</h2>
+      <div class="emoji-grid" id="emojiGrid"></div>
+      <input type="color" id="color" />
+      <input type="text" id="note" placeholder="Short note..." maxlength="30"/>
+      <button id="saveMood">Save</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Harshit Chugh</p>
+    <a href="https://github.com/harshit18-09" target="_blank">GitHub</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
